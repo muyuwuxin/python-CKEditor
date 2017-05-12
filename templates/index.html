@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>舍与得-文档编辑上传</title>
+    <!-- 请确保CKEditor文件路径正确 -->
+</head>
+<body>
+    <form action="/blog-form/" method="post" enctype="multipart/form-data">
+{#        <textarea name="CKEditor" id="CKEditor" rows="10" cols="80">#}
+{#            This is my textarea to be replaced with CKEditor.#}
+{#        </textarea>#}
+        <h1>上传功能测试</h1>
+        {{ form.body(id="CKEditor") }}
+        <input type="submit" value="提交">
+    </form>
+<script type="text/javascript" src="ckeditor/ckeditor.js"></script>
+<script type="text/javascript">
+    // 用CKEditor替换<textarea id="editor1">
+    // 使用默认配置
+    CKEDITOR.replace('CKEditor');
+</script>
+</body>
+</html>
